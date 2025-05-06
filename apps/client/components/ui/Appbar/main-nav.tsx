@@ -9,7 +9,7 @@ const Navbar = () => {
     
   console.log("session ", isLoggedIn, "user ", user)
   return (
-    <div>
+    <div className='absolute z-50 top-0 right-0 left-0'>
          <header className=" text-white px-4 lg:px-6 py-4 flex items-center justify-between">
         <Link className="flex items-center gap-2" href="#">
           <CheckCircle className="h-6 w-6" />

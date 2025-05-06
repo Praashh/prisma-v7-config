@@ -3,7 +3,7 @@ import LandingHero from "../ui/Landing/landingHero";
 
 export default function Landing() {
     return (
-     <div>
+     <div className="relative">
   
         <Navbar/>
         <LandingHero/>
