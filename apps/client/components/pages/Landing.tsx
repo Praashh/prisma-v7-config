@@ -1,13 +1,19 @@
+"use client"
 import Navbar from "../ui/Appbar/main-nav";
+import LandingBody from "../ui/Landing/LandingBody";
 import LandingHero from "../ui/Landing/landingHero";
+import { LenisWrapper } from "../Wrappers/LenisWrapper";
 
 export default function Landing() {
     return (
-     <div className="relative">
-  
-        <Navbar/>
-        <LandingHero/>
+        <LenisWrapper>
+            <div className="relative">
         
-     </div>
+                <Navbar/>
+                <LandingHero/>
+                <LandingBody/>
+                
+            </div>
+        </LenisWrapper>
     )
   }

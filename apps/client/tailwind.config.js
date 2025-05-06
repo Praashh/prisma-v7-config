@@ -10,6 +10,9 @@ module.exports = {
   ],
   theme: {
     extend: {
+      backgroundImage: {
+      'radial': 'radial-gradient(var(--tw-gradient-stops))',
+      },
       fontFamily: {
         neogothis: ['NeoGothis', 'sans-serif'],
         grotesk: ['PowerGrotesk', 'sans-serif'],

@@ -5,19 +5,21 @@ import oracle from '../../../assets/landingImgs/OracleFinal.png'
 import cursor from '../../../assets/landingImgs/elements/cursor.png'
 import ele1 from '../../../assets/landingImgs/elements/ele1.png'
 import Image from "next/image"
+import { useRef } from "react"
 
 const LandingHero = () => {
 
     const controls = useAnimation();
+    const constraintRef = useRef(null);
     
     return <motion.div className="w-[100vw] h-[100vh]">
         {/* main comp  */}
         <motion.div 
         className="flex flex-row w-[100vw] h-[90%] justify-between items-end  
         shadow-xl rounded-b-3xl
-        bg-gradient-to-br from-[#000000] via-[#0a2650] to-[#000000]
-        overflow-hidden">
-
+        bg-radial from-[#2f286b] to-black 
+        overflow-hidden"> {/* bg-gradient-to-br from-[#000000] via-[#0a2650] to-[#000000] */}
+        
             {/* Text Part */}
             <motion.div 
             className="relative text-white flex flex-col justify-end items-center w-[50%] h-full px-40 pb-52 gap-6  ">
@@ -84,18 +86,21 @@ const LandingHero = () => {
             </motion.div>
 
             {/* Img Part */}
-            <motion.div drag 
-            whileDrag={{ rotate: 5, scale: 0.96 }}
-            onDragEnd={() => {
-              controls.start({ x: 0, y: 0, transition: { type: "spring", stiffness: 300 } });
-            }}
-            dragElastic={0.5}
-            animate={controls}
-            className="w-[50%] ">
+            <motion.div 
+            ref={constraintRef}
+            initial={{filter: "drop-shadow(0px 0px 10px rgba(0, 255, 255, 0.1))",y:[10]}}
+            animate={{filter: "drop-shadow(0px 0px 20px rgba(255, 255, 255, 0.5))",y:0}} 
+            transition={{repeat:Infinity,duration:1.2,repeatType:"reverse",ease:"easeInOut"}}
+            className="w-[50%]">
                 <motion.div 
-                               initial={{filter: "drop-shadow(0px 0px 10px rgba(0, 255, 255, 0.1))",y:[10]}}
-                               animate={{filter: "drop-shadow(0px 0px 20px rgba(255, 255, 255, 0.5))",y:0}} 
-                               transition={{repeat:Infinity,duration:1.2,repeatType:"reverse",ease:"easeInOut"}}
+                drag 
+                whileDrag={{ rotate: 5, scale: 0.96 }}
+                onDragEnd={() => {
+                  controls.start({ x: 0, y: 0, transition: { type: "spring", stiffness: 300 } });
+                }}
+                dragElastic={0.5}
+                animate={controls}
+                dragConstraints={constraintRef}
                 >
                     <Image src={oracle} alt="Oracle Illustration" className="w-full h-auto pointer-events-none drop-shadow"/>
                 </motion.div>

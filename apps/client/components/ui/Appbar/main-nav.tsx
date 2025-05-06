@@ -13,7 +13,7 @@ const Navbar = () => {
          <header className=" text-white px-4 lg:px-6 py-4 flex items-center justify-between">
         <Link className="flex items-center gap-2" href="#">
           <CheckCircle className="h-6 w-6" />
-          <span className="text-xl font-bold">TruthChain</span>
+          <span className="text-2xl font-bold font-grotesk">TruthChain</span>
         </Link>
         {
           isLoggedIn ? (
