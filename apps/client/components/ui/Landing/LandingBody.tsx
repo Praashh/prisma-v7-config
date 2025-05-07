@@ -3,9 +3,8 @@ import { motion } from "framer-motion"
 import HowItWorks from "./sub/HowItWorks"
 
 const LandingBody = () => {
-    return <motion.div className="h-[100dvh] w-[100vw] ">
-        <motion.div className="h-[100%] w-[100%] bg-radial  from-[#06022c] via-[#02000e] to-[#000]
-        flex flex-col">
+    return <motion.div className="min-h-[100vh] w-[100vw]  bg-radial  from-[#06022c] via-[#02000e] to-[#000] ">
+        <motion.div className="h-[100%] w-[100%] flex flex-col">
             {/* Txt part */}
 
             <motion.div className=" flex flex-col gap-4 items-center justify-center mt-44 ">

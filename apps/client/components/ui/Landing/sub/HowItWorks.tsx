@@ -1,3 +1,6 @@
+"use client"
+import {motion} from 'framer-motion';
+
 const HowItWorks = () => {
     const steps = [
         {
@@ -92,7 +95,7 @@ const HowItWorks = () => {
           </div>
           
           <div className="mt-16">
-            <div className="h-1 bg-gradient-to-r from-[#32254e] via-[#1F51FF] to-[#32254e] rounded-full"></div>
+            <motion.div className="h-1 bg-gradient-to-r from-[#32254e] via-[#1F51FF] to-[#32254e] rounded-full"></motion.div>
           </div>
         </div>
       </section>

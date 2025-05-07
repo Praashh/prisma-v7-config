@@ -19,8 +19,8 @@ const LandingHero = () => {
         <motion.div 
         className="flex flex-row pl-10 w-[100vw] h-[100%] justify-between items-end  
         shadow-xl rounded-b-3xl
-        bg-radial from-[#171246] via-[#070420] to-black 
-        overflow-hidden"> {/* bg-gradient-to-br from-[#000000] via-[#0a2650] to-[#000000]  #2f286b #0a2650*/}
+        bg-gradient-to-b from-[#102f3f] via-[#04121a] to-[#02000e] 
+        overflow-hidden"> {/* bg-gradient-to-br from-[#000000] via-[#0a2650] to-[#000000]  #2f286b #0a2650  last - #171246,via #070420*/}
 
             <motion.div className="absolute top-40 right-0 left-0">
                 <Image src={bgGrid} alt="bgImg" className="h-[90vh] w-full"/>
