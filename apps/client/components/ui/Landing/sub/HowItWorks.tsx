@@ -1,8 +1,9 @@
 "use client"
 import {motion} from 'framer-motion';
+import Ball from '../../customElements/Ball';
 
 const HowItWorks = () => {
-    const steps = [
+    const step = [
         {
           id: 1,
           title: "Create a Fact",
@@ -68,35 +69,80 @@ const HowItWorks = () => {
   
     return (
       <section className="py-20 px-4 relative">
-        <div className="container mx-auto">
-          <h2 className="text-3xl md:text-4xl font-bold mb-16 text-center">
-            
-          </h2>
+        <div className=" flex w-[100vw] items-center justify-center ">
+
+
           
-          <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-6">
-            {steps.map((step) => (
-              <div 
-                key={step.id}
-                className="backdrop-blur-2xl p-6 flex flex-col items-center text-center transform  
-                border border-white/20 hover:border-[#1F51FF] hover:translate-y-[-5px] transition-all ease duration-300 rounded-md"
-                data-aos="fade-up"
-                data-aos-delay={step.id * 100}
-              >
-                <div className="h-16 w-16 rounded-full bg-truth-purple/20 flex items-center justify-center mb-6">
-                  {step.icon}
+            <div className="relative grid w-[80%] md:grid-cols-1 lg:grid-cols-1 gap-6">
+
+                <div className="absolute w-full h-full flex justify-center ">
+                    <motion.div className="w-1 h-[100%] bg-gradient-to-b from-[#32254e] via-[#1F51FF] to-[#32254e] rounded-full" />
+
+                    
                 </div>
-                <h3 className="text-xl font-bold mb-3 text-white">{step.title}</h3>
-                <p className="text-white/70">{step.description}</p>
-                <div className="mt-4 text-truth-purple text-2xl font-bold">
-                  {step.id}
-                </div>
-              </div>
-            ))}
-          </div>
+
+
+                {/* Card 1  */}
+                <motion.div 
+                className="backdrop-blur-2xl max-w-[36rem] p-6 flex flex-col items-center text-center 
+                border border-white/20 hover:border-[#1F51FF] 
+                hover:rounded-xl hover:bg-gradient-to-br from-red-950/75 via-[#0815444f] to-black/10 hover:translate-y-[-5px] transition-all ease duration-300 rounded-md
+                relative"
+                ><Ball/>
+                    <div className="h-16 w-16 rounded-full bg-truth-purple/20 flex items-center justify-center mb-6">
+                    {step[0].icon} 
+                    </div>
+                    <h3 className="text-2xl font-bold mb-3 text-white ">{step[0].title}</h3>
+                    <p className="text-white/70 ">{step[0].description}</p>
+                </motion.div>
+
+                {/* Card 2  */}
+                <motion.div 
+                className="backdrop-blur-2xl max-w-[36rem] p-6 flex flex-col items-center text-center 
+                border border-white/20 hover:border-[#1F51FF] 
+                hover:rounded-xl hover:bg-gradient-to-br from-red-950/75 via-[#0815444f] to-black/10 hover:translate-y-[-5px] transition-all ease duration-300 rounded-md
+                lg:translate-x-[20rem] xl:translate-x-[30rem] 2xl:translate-x-[58rem]
+                relative ">
+                    <Ball/>
+                    <div className="h-16 w-16 rounded-full bg-truth-purple/20 flex items-center justify-center mb-6">
+                    {step[1].icon}
+                    </div>
+                    <h3 className="text-2xl font-bold mb-3 text-white ">{step[1].title}</h3>
+                    <p className="text-white/70 ">{step[1].description}</p>
+                </motion.div>
+
+                {/* Card 3  */}
+                <motion.div 
+                className="backdrop-blur-2xl max-w-[36rem] p-6 flex flex-col items-center text-center 
+                border border-white/20 hover:border-[#1F51FF] 
+                hover:rounded-xl hover:bg-gradient-to-br from-red-950/75 via-[#0815444f] to-black/10 hover:translate-y-[-5px] transition-all ease duration-300 rounded-md"
+                >
+                    <Ball/>
+                    <div className="h-16 w-16 rounded-full bg-truth-purple/20 flex items-center justify-center mb-6">
+                    {step[2].icon}
+                    </div>
+                    <h3 className="text-2xl font-bold mb-3 text-white ">{step[2].title}</h3>
+                    <p className="text-white/70 ">{step[2].description}</p>
+                </motion.div>
+
+                {/* Card 4  */}
+                <motion.div 
+                className="backdrop-blur-2xl max-w-[36rem] p-6 flex flex-col items-center text-center 
+                border border-white/20 hover:border-[#1F51FF] 
+                hover:rounded-xl hover:bg-gradient-to-br from-red-950/75 via-[#0815444f] to-black/10 hover:translate-y-[-5px] transition-all ease duration-300 rounded-md
+                lg:translate-x-[20rem] xl:translate-x-[30rem] 2xl:translate-x-[58rem]
+                ">
+                    <Ball/>
+                    <div className="h-16 w-16 rounded-full bg-truth-purple/20 flex items-center justify-center mb-6">
+                    {step[3].icon}
+                    </div>
+                    <h3 className="text-2xl font-bold mb-3 text-white ">{step[3].title}</h3>
+                    <p className="text-white/70 ">{step[3].description}</p>
+                </motion.div>
+
+            </div>
           
-          <div className="mt-16">
-            <motion.div className="h-1 bg-gradient-to-r from-[#32254e] via-[#1F51FF] to-[#32254e] rounded-full"></motion.div>
-          </div>
+          
         </div>
       </section>
     );
