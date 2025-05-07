@@ -4,6 +4,7 @@ import AnimatedButton from "../Buttons/AnimatedButton"
 import oracle from '../../../assets/landingImgs/OracleFinal.png'
 import cursor from '../../../assets/landingImgs/elements/cursor.png'
 import ele1 from '../../../assets/landingImgs/elements/ele1.png'
+import bgGrid from '../../../assets/landingImgs/bg-grid-hero-m.svg'
 import Image from "next/image"
 import { useRef } from "react"
 
@@ -12,13 +13,18 @@ const LandingHero = () => {
     const controls = useAnimation();
     const constraintRef = useRef(null);
     
-    return <motion.div className="w-[100vw] h-[100vh]">
+    return <motion.div className="w-[100vw] h-[90vh]">
+
         {/* main comp  */}
         <motion.div 
-        className="flex flex-row w-[100vw] h-[90%] justify-between items-end  
+        className="flex flex-row pl-10 w-[100vw] h-[100%] justify-between items-end  
         shadow-xl rounded-b-3xl
-        bg-radial from-[#2f286b] to-black 
-        overflow-hidden"> {/* bg-gradient-to-br from-[#000000] via-[#0a2650] to-[#000000] */}
+        bg-radial from-[#171246] via-[#070420] to-black 
+        overflow-hidden"> {/* bg-gradient-to-br from-[#000000] via-[#0a2650] to-[#000000]  #2f286b #0a2650*/}
+
+            <motion.div className="absolute top-40 right-0 left-0">
+                <Image src={bgGrid} alt="bgImg" className="h-[90vh] w-full"/>
+            </motion.div>
         
             {/* Text Part */}
             <motion.div 
@@ -65,7 +71,7 @@ const LandingHero = () => {
                 {/* Main Heading */}
                 <motion.h1 
                     className="font-bold font-grotesk text-7xl lg:text-9xl 
-                    bg-gradient-to-br from-[#1b2475] via-[#2e6dd8] to-[#38e1ff] 
+                    bg-gradient-to-br from-[#d4f9ff] via-[#bbcff0] to-[#96efff] 
                     text-transparent bg-clip-text leading-tight z-20"
                 >
                     TruthChain
